@@ -473,6 +473,14 @@ body{
 
 
 
+
+
+
+
+
+
+
+
 #about-content{
     display: flex;
     flex-direction:column;
@@ -681,139 +689,7 @@ body{
     font-size: 16px;
     opacity: .8;
 }
-#skills{
-    width: 100%;
-    height:auto;
-}
-.skills-header{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 45px;
-    font-family: raleway;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-weight: 900;
-}
-.skills-content{
-    height: auto;
-    width:100%;
-    margin-top: 20px;
-    margin-bottom: 80px;
-}
-.skill-html{
-    height: auto;
-    width: 45%;
-    padding: 0%;
-    position: relative;
-    font-family: poppins;
-    color:whitesmoke;
-    display: inline-block;
-    padding:1.5%;
-}
-.skill-text{
-    width:80%;
-    position: relative;
-    height: 50px;
-}
-.html{
-    display: inline-block;
-    position: absolute;
-    left: 5%;
-    top:30%;
-}
-.html-prog{
-   width:100%;
-   height:40px;
-   border-radius: 10px;
-   background: #191919;
-   box-shadow:0px 0px 25px rgb(0,0,0,.1);
-   position: relative;
-   overflow: hidden;
-}
-.html-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s ease;
-    width:95%;
-    border-radius: 10px;
-    background: #c70039;
-}
-.js-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    font-family: poppins;
-    justify-content: center;
-    transition: all .4s ease;
-    width:90%;
-    border-radius: 10px;
-    background: #c70039;
-}
-.adobe-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s ease;
-    width:83%;
-    border-radius: 10px;
-    background: #c70039;
-}
-.php-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:85%;
-    border-radius: 10px;
-    background: #c70039;
-    transition: all .4s ease;
-}
-.jquery-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all .4s ease;
-    width:94%;
-    border-radius: 10px;
-    background: #c70039;
-}
-.seo-progress{
-    position: absolute;
-    top:10%;
-    left:1%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:84%;
-    border-radius: 10px;
-    transition: all .4s ease;
-    background: #c70039;
-}
+
 .portfolio-header{
     height: auto;
     width: 100%;
@@ -1173,7 +1049,7 @@ padding-bottom: 40px;
 }
 
 #resume .resume-header h2 {
-    color: #c70039;
+    color: #ffffff;
     font-family: raleway;
     font-size: 2.5rem;
     padding-bottom: 2rem;
@@ -1307,10 +1183,14 @@ padding-bottom: 40px;
 }
 
 @media only screen and (max-width: 768px) {
+    .main-container, #resume .resume-timeline {
+        padding: 0 50px !important;
+        box-sizing: border-box;
+    }
     #resume .timeline-wrap::before {
         left: 2.4rem;
     }
-
+    
     #resume .timeline-ico {
         left: 2.4rem;
     }
@@ -1712,6 +1592,12 @@ form button:hover{
   list-style: none;
 }
 
+
+
+
+
+
+
 /*
 
 For devices with smaller width like mobile phone
@@ -1847,16 +1733,18 @@ For devices with smaller width like mobile phone
         flex-direction: column-reverse;
     }
     .about-img img{
-        width: 280px;
-        height:220px;
+        width: 100%;
+        max-width: 100%;  /* Ensure the image doesn't exceed the container's width */
+        height: auto;  /* Maintain aspect ratio */
         padding: 5px;
         border-radius: 10%;
     }
     .about-img {
         width: 100%;
-        height:250px;
+        height:auto;
         text-align: center;
-        overflow: hidden;
+        display: flex;
+        /* overflow: hidden; */
         border-radius: 10%;
     }
     .service{
@@ -2029,11 +1917,11 @@ For devices with smaller width like mobile phone
                 align-items: center;
                 justify-content: center;
             }
-            .contact-info{
-                width: 90%;
-                height: 500px;
-                background-position: center;
-                background-size: cover;
+            .contact-info {
+                width: 100%; /* Ensure it takes full width of the screen */
+                height: auto; /* Allow the height to adjust based on content */
+                padding: 20px; /* Add padding to avoid content touching the edges */
+                background-size: cover; /* Make sure background scales properly */
                 border-radius: 16px;
                 margin-bottom: 25px;
                 position: relative;
@@ -2052,7 +1940,7 @@ For devices with smaller width like mobile phone
             }
             .contact-form{
                 height: auto;
-                width: 90%;
+                width: 100%; /* Ensure the form takes full width */
                 display: flex;
                 padding-bottom: 40px;
                 padding-right:0px;
@@ -2074,6 +1962,11 @@ For devices with smaller width like mobile phone
                 align-items: center;
                 justify-content: center;
             }
+
+            .input-name, .input-subject, .input-textarea {
+                width: 100%; /* Make input fields take full width */
+            }
+
             .input-name{
                 width: 90%;
                 padding:10px 20px;
@@ -2143,28 +2036,27 @@ For devices with smaller width like mobile phone
                 color: whitesmoke;
                 padding: 20px;
             }
-            .contect-info-content-line{
-                height: auto;
+            .contect-info-content-line {
                 padding: 10px;
-                position: relative;
-                z-index: 2;
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                text-align: left;
-                margin-left: 5%;
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center align the items */
+                text-align: center; /* Center the text */
+                margin-left: 0; /* Remove any left margin */
             }
+
             .contact-info-icon-text{
                 color: whitesmoke;
                 padding:15px;
                 font-family: poppins;
             }
-            .contact-info-icon-text h6{
-                font-size: 25px;
-                opacity: .8;
+            
+            .contact-info-icon-text h6 {
+            font-size: 20px; /* Adjust font size */
+            opacity: .8;
             }
-            .contact-info-icon-text p{
-                font-size: 20px;
+            .contact-info-icon-text p {
+                font-size: 16px; /* Adjust font size */
                 opacity: .8;
             }
             .hire-me-section{
@@ -2302,16 +2194,18 @@ for tabs and large phones
     }
     .about-img img{
         width: 100%;
-        height:380px;
+        max-width: 100%;  /* Ensure the image doesn't exceed the container's width */
+        height: auto;  /* Maintain aspect ratio */
         padding: 30px;
         border-radius: 40px;
     }
     .about-img {
-        width: 550px;
+        width: 100%;
         height:auto;
         padding: 30px;
         padding-top: 10px;
-        border-radius: 40px;
+        border-radius: 40px;display: flex;
+        justify-content: center;  /* Center the image */
     }
     .cv a button{
         border:none;
@@ -2651,19 +2545,32 @@ for tabs and large phones
         height: 500px;
         width: 40%;
     }
-    .about-img img{
-        width: 100%;
-        height:450px;
-        padding: 30px;
-        border-radius: 40px;
-        animation: opacity 1.4s ease ;
+    .about-img img {
+        width: 100%; /* Ensure the image takes up the full container width */
+        height: auto;
+        border-radius: 20px; /* Keep the border radius if you want a rounded look */
     }
+
     .about-img {
-        width: 40%;
-        height:450px;
-        padding: 30px;
-        border-radius: 40px;
+        width: 40%; /* Adjust image width */
+        height: auto;
+        padding: 0; /* Remove padding */
     }
+    .about-first-paragraph {
+        width: 60%; /* Adjust text width */
+        padding: 0; /* Remove padding */
+    }
+    .about-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 100%; /* Use the full width of the container */
+        margin: 0; /* Remove any margin */
+        text-align: left;
+        padding: 0; /* Remove any padding */
+    }
+
     .about-first-line{
         font-size: 40px; /* Reduced from 45px */
         opacity: 1;
